@@ -16,3 +16,6 @@ titanic = pd.read_csv(url)
 titanic.columns =['PassengerId','Survived','Pclass','Name','Sex','Age','SibSp','Parch','Ticket','Fare','Cabin','E mbarked']
 
 You use only Pclass, Sex, Age, SibSp (Siblings aboard), Parch(Parents/children aboard), and Fare to predict whether a passenger survived.
+
+The decision Tree model is trained and deployed on Heroku.
+https://titanic-dtree-assign.herokuapp.com/
