@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Prediction of affairs</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <label>rate_marriage:</label>
+            <input type="float" name="rate_marriage" id="rate_marriage" placeholder="rate_marriage" value="3.0" ><br><br>
+            <label>age:</label>
+            <input type="float" name="age" id="age" placeholder="age" value="27.0"><br><br>
+            <label>yrs_married:</label>
+            <input type="float" name="yrs_married" id="yrs_married" placeholder="yrs_married" value="13.0"><br><br>
+            <label>children:</label>
+            <input type="float" name="children" id="children" placeholder="children" value="3.0"><br><br>
+            <label>religious:</label>
+            <input type="float" name="religious" id="religious" placeholder="religious" value="1.0"><br><br>
+            <label>educ:</label>
+            <input type="float" name="educ" id="educ" placeholder="educ" value="14.0"><br><br>
+            <label>occupation:</label>
+            <input type="float" name="occupation" id="occupation" placeholder="occupation" value="3.0" ><br><br>
+            <label>occupation_husb:</label>
+            <input type="float" name="occupation_husb" id="occupation_husb" placeholder="occupation_husb" value="4.0"><br><br>
+
+            <input type="submit" value="Predict">
+
+            <h3 style="text-align:left">Another example of input- 5.0, 27.0, 9.0, 1.0, 1.0, 14.0, 3.0, 4.0</h3>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}
